@@ -23,7 +23,6 @@ void preencher(){
   scanf("%d",&agenda.fone.cel);
   printf("\nEntre com o telefone do trabalho: ");
   scanf("%d",&agenda.fone.trab);
-  printf("\nNome: %s\nEndereço: %s\nDDD: %d\nCasa: %d\nCelular: %d\nTrabalho: %d\n",agenda.nome,agenda.endereco,agenda.fone.ddd,agenda.fone.casa,agenda.fone.cel,agenda.fone.trab);
 }
 
 int main (void){
@@ -37,19 +36,9 @@ int main (void){
     printf("Erro ao abrir o arquivo\n" );
     system("pause");
   }
-
-    //preencher();
+    preencher();
     contador++;
-    strcpy (agenda.nome, "JATO");
-    strcpy (agenda.endereco, "RUA PINTO");
-    agenda.fone.ddd=11;
-    printf("%d\n",agenda.fone.ddd);
-    printf("%s\n", agenda.nome);
-
-    //fwrite( agenda.nome ,sizeof(agenda.nome),1, arquivoUM);
     fwrite( &agenda, sizeof(struct regagenda), 1, arquivoUM);
-
-
     fclose (arquivoUM);
 
   return 0;
