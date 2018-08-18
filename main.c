@@ -31,7 +31,7 @@ int main (void){
   float ;
   char opcao;
   FILE *arquivoUM;
-  arquivoUM = fopen("arquivoBin.txt", "wb");
+  arquivoUM = fopen("arquivoBin.dat", "wb");
   if (arquivoUM == NULL) {
     printf("Erro ao abrir o arquivo\n" );
     system("pause");
