@@ -28,7 +28,7 @@ void preencher(){
 }
 
 int main (void){
-  int ;
+  int result;
   float ;
   FILE *arquivoUM;
   arquivoUM = fopen("arquivoBin.dat", "wb");
@@ -41,7 +41,8 @@ int main (void){
 
   }
   preencher();
-  fwrite(agenda.fone.casa,4 ,sizeof(agenda.fone.casa), arquivoUM);
+  result= fwrite(&agenda.fone.casa,sizeof(int),sizeof(agenda.fone.casa), arquivoUM);
+  printf("%d", result);
   return 0;
   system("pause");
 
