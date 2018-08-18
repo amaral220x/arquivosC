@@ -24,6 +24,7 @@ void preencher(){
   printf("\nEntre com o telefone do trabalho: ");
   scanf("%d",&agenda.fone.trab);
   printf("\nNome: %s\nEndereço: %s\nDDD: %d\nCasa: %d\nCelular: %d\nTrabalho: %d\n",agenda.nome,agenda.endereco,agenda.fone.ddd,agenda.fone.casa,agenda.fone.cel,agenda.fone.trab);
+
 }
 
 int main (void){
@@ -40,6 +41,7 @@ int main (void){
 
   }
   preencher();
+  fwrite(agenda.fone.casa,4 ,sizeof(agenda.fone.casa), arquivoUM);
   return 0;
   system("pause");
 
