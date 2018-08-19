@@ -102,7 +102,7 @@ int main (void){
   fread(&agenda, sizeof(struct regagenda), 1, arquivoDOIS);
   //ARQUIVOLIDO
   mostrar();
-  system("pause");
+  system("pause");//Começando a procurar pelo final do arquivo. Indo de registro em registro.
   while(!feof(arquivoDOIS)){
     fseek(arquivoDOIS, registro*sizeof(struct regagenda), SEEK_SET);
     fread(&agenda, sizeof(struct regagenda), 1, arquivoDOIS);
